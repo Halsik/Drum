@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUM KIT</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="icon" href="drumicon.jpeg">
+</head>
+
+<style>
+
+:root {
+    --background: #091921;
+    --text: #00fff1;
+}    
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background: var(--background);
+    transition-duration: 0.4s;
+
+}
+
+.container {
+    padding: 10px;
+    min-height: 90vh;
+    margin: 3vh auto;
+    box-shadow: inset 2px 2px 5px var(--text),
+    inset -2px -2px 5px var(--text);
+    border-radius: 8px;
+    
+}
+.title {
+    margin: 20px 0;
+    font-size: 4rem;
+    font-weight: bolder;
+    opacity: 0.9;
+    color: var(--text);
+}
+.drum {
+    width: 150px;
+    height: 150px;
+    background: var(--background);
+    color: var(--text);
+    font-size: 3rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+    1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+    border-radius: 15px;
+}
+.w,.d,.l {
+    border-radius: 50%;
+}
+.volume_control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#volume_slider {
+    height: 7px;
+    width: 200px;
+    margin-left: 10px;
+    appearance: none;
+    background: var(--text);
+    border-radius: 7px;
+    outline: none;
+}
+#volume_slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--text);
+    cursor: pointer;
+}
+
+.fa {
+    color: var(--text);
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+    1px 1px 3px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+.buttons>button {
+    height: 50px;
+    width: 200px;
+    
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+    1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+#util_button-theme {
+    color: var(--background);
+    background: var(--text);
+    transition-duration: 1;
+}
+#util_button-theme:hover {
+    cursor: pointer;
+   
+}
+.pressed {
+    opacity: 0.5;
+    box-shadow: -1px -1px 3px var(--text);
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <h1 class="title">Kocham marte</h1>
+        <div class="drum_set">
+            <button class="drum w">w</button>
+            <button class="drum a">a</button>
+            <button class="drum s">s</button>
+            <button class="drum d">d</button>
+            <button class="drum j">j</button>
+            <button class="drum k">k</button>
+            <button class="drum l">l</button>
+        </div>
+        <div class="volume_control">
+            <i class="fa fa-volume-up fa-2x"></i>
+            <input type="range" name="" id="volume_slider" min="0" max="100">
+        </div>
+        <div class="buttons">
+            <audio src="song.mp3" id="audio"></audio>
+            <button id="util_button-play">Zagraj z muzyką!</button>
+            <button id="util_button-theme">Zmień motyw</button>
+            
+        </div>
+    </div>
+
+    
+</body>
+<script src="DRUM KIT.JS"></script>
+</html>
